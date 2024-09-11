@@ -1,0 +1,3 @@
+[submodule "External/libLifeSchedulerFramework"]
+	path = External/libLifeSchedulerFramework
+	url = git@github.com:danybeam/libLifeSchedulerFramework.git
