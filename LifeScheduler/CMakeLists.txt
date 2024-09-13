@@ -12,6 +12,7 @@ target_include_directories(LifeScheduler PRIVATE
 
 target_link_libraries(LifeScheduler PRIVATE
 	libLifeSchedulerFramework
+	raylib
 )
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
