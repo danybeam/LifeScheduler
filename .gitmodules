@@ -1,3 +1,6 @@
 [submodule "External/libLifeSchedulerFramework"]
 	path = External/libLifeSchedulerFramework
 	url = git@github.com:danybeam/libLifeSchedulerFramework.git
+[submodule "External/raylib"]
+	path = External/raylib
+	url = git@github.com:raysan5/raylib.git
