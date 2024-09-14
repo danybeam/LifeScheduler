@@ -7,3 +7,6 @@
 [submodule "External/raylib-cpp"]
 	path = External/raylib-cpp
 	url = git@github.com:RobLoach/raylib-cpp.git
+[submodule "External/raygui"]
+	path = External/raygui
+	url = git@github.com:raysan5/raygui.git
