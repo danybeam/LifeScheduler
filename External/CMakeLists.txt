@@ -3,3 +3,9 @@
 add_subdirectory("libLifeSchedulerFramework")
 add_subdirectory("raylib")
 add_subdirectory("raylib-cpp")
+
+# Hack to add only raygui.h file
+add_library(raygui INTERFACE)
+target_include_directories(raygui INTERFACE
+	"${CMAKE_CURRENT_LIST_DIR}/raygui/src"
+)
