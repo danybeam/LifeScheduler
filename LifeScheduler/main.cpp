@@ -1,33 +1,35 @@
 #include <raylib-cpp.hpp>
 
-int main() {
-    // Initialization
-    //--------------------------------------------------------------------------------------
-    int screenWidth = 800;
-    int screenHeight = 450;
-    raylib::Color textColor = raylib::Color::LightGray();
-    raylib::Window window(screenWidth, screenHeight, "Life Scheduler");
+#define RAYGUI_IMPLEMENTATION
+#include <raygui.h>
 
+int main()
+{
+    InitWindow(400, 200, "raygui - controls test suite");
     SetTargetFPS(60);
-    //--------------------------------------------------------------------------------------
 
-    // Main game loop
-    while (!window.ShouldClose()) {   // Detect window close button or ESC key
-        // Update
-        //----------------------------------------------------------------------------------
-        // Update your variables here
-        //----------------------------------------------------------------------------------
+    bool showMessageBox = false;
 
+    while (!WindowShouldClose())
+    {
         // Draw
         //----------------------------------------------------------------------------------
         BeginDrawing();
+        ClearBackground(GetColor(GuiGetStyle(DEFAULT, BACKGROUND_COLOR)));
+
+        if (GuiButton(Rectangle{ 24, 24, 120, 30 }, "#191#Show Message")) showMessageBox = true;
+
+        if (showMessageBox)
         {
-            window.ClearBackground(RAYWHITE);
-            textColor.DrawText("Congrats! You created your first window!", 190, 200, 20);
+            int result = GuiMessageBox(Rectangle{ 85, 70, 250, 100 },
+                "#191#Message Box", "Hi! This is a message!", "Nice;Cool");
+
+            if (result >= 0) showMessageBox = false;
         }
+
         EndDrawing();
-        //----------------------------------------------------------------------------------
     }
 
+    CloseWindow();
     return 0;
 }
