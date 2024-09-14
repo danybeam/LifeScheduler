@@ -12,13 +12,14 @@ target_sources(LifeScheduler PRIVATE
 )
 
 target_include_directories(LifeScheduler PRIVATE
-"$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>"
+"$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>/"
 )
 
 target_link_libraries(LifeScheduler PRIVATE
 	libLifeSchedulerFramework
 	raylib
 	raylib_cpp
+	raygui
 )
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
