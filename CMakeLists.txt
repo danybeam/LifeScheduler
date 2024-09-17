@@ -12,6 +12,7 @@ endif()
 project ("LifeScheduler")
 
 # Add source to this project's executable.
+include(CTest)
 add_subdirectory("External")
 add_subdirectory("LifeScheduler")
 

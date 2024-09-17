@@ -27,3 +27,16 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
 endif()
 
 # TODO: Add tests and install targets if needed.
+if(BUILD_TESTING AND (${CMAKE_PROJECT_NAME} STREQUAL ${PROJECT_NAME}))
+	file(GLOB SRC_FILES "${PROJECT_SOURCE_DIR}/LifeScheduler/*.test.cpp")
+	add_executable(${PROJECT_NAME}_test
+		${SRC_FILES}
+	)
+
+	target_link_libraries(${PROJECT_NAME}_test PRIVATE
+		GTest::gtest_main
+	)
+
+	include(GoogleTest)
+	gtest_discover_tests(${PROJECT_NAME}_test)
+endif()
