@@ -10,3 +10,6 @@
 [submodule "External/raygui"]
 	path = External/raygui
 	url = git@github.com:raysan5/raygui.git
+[submodule "External/googletest"]
+	path = External/googletest
+	url = git@github.com:google/googletest.git
