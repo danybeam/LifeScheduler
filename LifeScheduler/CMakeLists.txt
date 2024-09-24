@@ -9,7 +9,10 @@ add_executable (LifeScheduler)
 target_sources(LifeScheduler PRIVATE
 	"main.cpp"
 	"LifeScheduler.cpp"
-)
+	"IWindowElement.h"
+	"WindowScene.cpp"
+	"PopupMenuElement.cpp"
+ )
 
 target_include_directories(LifeScheduler PRIVATE
 "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>/"
@@ -35,6 +38,10 @@ if(BUILD_TESTING AND (${CMAKE_PROJECT_NAME} STREQUAL ${PROJECT_NAME}))
 
 	target_link_libraries(${PROJECT_NAME}_test PRIVATE
 		GTest::gtest_main
+	)
+
+	target_include_directories(${PROJECT_NAME}_test PRIVATE
+		"$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>"
 	)
 
 	include(GoogleTest)
