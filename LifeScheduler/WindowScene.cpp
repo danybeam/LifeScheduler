@@ -20,6 +20,10 @@ LifeScheduler::View::WindowScene::~WindowScene()
 	m_components.clear();
 }
 
+void LifeScheduler::View::WindowScene::Update()
+{
+}
+
 void LifeScheduler::View::WindowScene::Draw()
 {
 	for (auto& windowElement : m_components)

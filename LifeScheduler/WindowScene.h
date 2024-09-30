@@ -13,6 +13,7 @@ namespace LifeScheduler::View
 		virtual ~WindowScene();
 
 		// Interface implementation methods
+		virtual void Update() override;
 		virtual void Draw() override;
 
 		// Manipulate elements in the scene

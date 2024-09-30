@@ -56,6 +56,10 @@ LifeScheduler::View::PopupMenuElement::~PopupMenuElement()
 {
 }
 
+void LifeScheduler::View::PopupMenuElement::Update()
+{
+}
+
 void LifeScheduler::View::PopupMenuElement::Draw()
 {
 	// Draw controls

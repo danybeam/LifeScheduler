@@ -14,6 +14,7 @@ namespace LifeScheduler::View
 		PopupMenuElement(Vector2& anchor, std::string& buttonText, std::string& menuOptions);
 		virtual ~PopupMenuElement();
 
+		virtual void Update() override;
 		virtual void Draw() override;
 
 	private:
